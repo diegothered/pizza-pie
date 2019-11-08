@@ -32,7 +32,7 @@ $(document).ready(function() {
 
     toppingInputs.forEach(function(toppingInputs) {
       toppingsArray.push(toppingInputs.val());
-      });
+    });
 
       var myPizza = new Pizza(sizeInput,toppingsArray);
       var price = myPizza.getPrice();
