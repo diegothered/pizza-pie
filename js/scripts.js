@@ -28,14 +28,16 @@ $(document).ready(function() {
 
     var toppingInputs = $(".toppings:checked");
     var toppingsArray = [];
-    var sizeInput = $("#size").val()
-
-    toppingInputs.forEach(function(toppingInputs) {
+    var sizeInput = $("#size").val();
+    toppingsArray.forEach(function(toppingInputs) {
       toppingsArray.push(toppingInputs.val());
+      console.log(toppingsArray)
     });
+
+
 
       var myPizza = new Pizza(sizeInput,toppingsArray);
       var price = myPizza.getPrice();
-      price.alert();
+      console.log(price)
     });
  });
