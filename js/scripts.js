@@ -27,14 +27,14 @@ $(document).ready(function() {
     event.preventDefault();
 
     var toppingInputs = $(".toppings:checked");
+    (console.log(toppingInputs))
     var toppingsArray = [];
     var sizeInput = $("#size").val();
-    toppingsArray.forEach(function(toppingInputs) {
+    console.log(sizeInput);
+    toppingInputs.each(function(toppings) {
       toppingsArray.push(toppingInputs.val());
       console.log(toppingsArray)
     });
-
-
 
       var myPizza = new Pizza(sizeInput,toppingsArray);
       var price = myPizza.getPrice();
