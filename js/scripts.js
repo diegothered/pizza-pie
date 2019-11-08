@@ -8,23 +8,31 @@ function Pizza (size, toppings) {
 Pizza.prototype.getPrice = function() {
   this.toppings.forEach(function(toppings) {
     this.price += 1;
-    if (this.size === small) {
-        this.price +=10
-      } else if (this.size === medium) {
-        this.price +=12;
-      } else {
-        this.price +=15
-      }
-    });
-    return this.price
+ if (this.size === small) {
+    this.price +=10
+  } else if (this.size === medium) {
+    this.price +=12;
+  } else {
+    this.price +=15
+  }
+});
+  return this.price
 }
-
-
-
-
 
 // user logic
 $(document).ready(function() {
-    // event.preventDefault();
+  $("#input").submit functon(event){
+    event.preventDefault();
+    var toppingInputs = $(".toppings:checked");
+    var toppingsArray = [];
+    var sizeInput = $("#size").val();
+    toppingInputs.forEach(function(toppingInputs){
+      toppingsArray.push(toppingInputs.val());
+      });
+      var myPizza = new Pizza(sizeInput,toppingsArray);
+      var price = myPizza.getPrice();
+      .alert(price)
+
+   }
 
 });
