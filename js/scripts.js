@@ -6,16 +6,16 @@ function Pizza (size, toppings) {
 }
 
 Pizza.prototype.getPrice = function() {
-  this.toppings.forEach(function(toppings) {
+  this.toppings.forEach(function(topping) {
     this.price += 1;
- if (this.size === "small") {
-    this.price +=10
-  } else if (this.size === "medium") {
-    this.price +=12;
-  } else {
-    this.price +=15
-  }
-});
+    if (this.size === "small") {
+      this.price += 10;
+    } else if (this.size === "medium") {
+      this.price += 12;
+    } else {
+      this.price += 15;
+    }
+  });
   return this.price
 }
 
@@ -23,8 +23,8 @@ Pizza.prototype.getPrice = function() {
 $(document).ready(function() {
 
   $("form#input").submit(function(event) {
-
     event.preventDefault();
+
 
     var toppingInputs = $(".toppings:checked");
     (console.log(toppingInputs))
@@ -35,9 +35,10 @@ $(document).ready(function() {
       toppingsArray.push(toppingInputs.val());
       console.log(toppingsArray)
     });
+    var myPizza = new Pizza(sizeInput,toppingsArray);
 
-      var myPizza = new Pizza(sizeInput,toppingsArray);
-      var price = myPizza.getPrice();
-      console.log(price)
-    });
- });
+    var price = myPizza.getPrice();
+    return price
+    console.log(price)
+  });
+});
