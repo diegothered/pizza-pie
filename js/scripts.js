@@ -12,6 +12,7 @@ Pizza.prototype.getPrice = function() {
       this.price += 10;
     } else if (this.size === "medium") {
       this.price += 12;
+      consol.log(this.price);
     } else {
       this.price += 15;
     }
@@ -38,7 +39,6 @@ $(document).ready(function() {
     var myPizza = new Pizza(sizeInput,toppingsArray);
 
     var price = myPizza.getPrice();
-    return price
     console.log(price)
   });
 });
