@@ -43,7 +43,7 @@ Project was written using Google Chrome; no other browsers were tested for compa
 There shouldn't be any special setup required. If something doesn't display correctly or goes wrong somehow, please contact me <diego.gustavo.rojas@gmail.com> and I will do my best to troubleshoot for you.
 
 ### Known Issues
-* KEEP THIS IF IT APPLIES: Although there is responsive sizing in place, this project is best viewed on standard desktop. It was not tested on a large desktop, table, or phone.
+* Although there is responsive sizing in place, this project is best viewed on standard desktop. It was not tested on a large desktop, table, or phone.
 
 
 ### License
