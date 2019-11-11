@@ -14,10 +14,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
 input[type="checkbox"]{
   margin: 0 10px 0 10px;
-  transform: scale(1.5);
+  transform: scale(1.0);
 }
 
 img {
   padding-top: 20px;
   padding-left: 15px;
   }
+
+#show-price {
+  font-weight: bold;
+  padding-top: 20px
+}
